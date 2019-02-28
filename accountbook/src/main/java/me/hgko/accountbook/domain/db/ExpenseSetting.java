@@ -10,15 +10,15 @@ import lombok.Data;
 import me.hgko.accountbook.domain.Domain;
 
 /**
- * 수입 내역 정보 테이블 도메인
+ * 지출 항목 설정 정보 테이블 도메인
  * 
  * @author hgko
  *
  */
 @Entity
-@Table(name = "tb_income")
+@Table(name = "tb_expense_setting")
 @Data
-public class Income implements Domain {
+public class ExpenseSetting implements Domain {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
