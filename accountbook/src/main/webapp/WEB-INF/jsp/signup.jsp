@@ -34,6 +34,12 @@
 	<!-- /theme JS files -->
 	
 	<script src="js/signup.js"></script>
+	
+	<style>
+	.row {
+		margin-right: 0;
+	}
+	</style>
 </head>
 <body class="bg-slate-800">
 	<div class="page-content">
@@ -50,15 +56,21 @@
 							<div class="form-group text-center text-muted content-divider">
 								<span class="px-2">자격 증명</span>
 							</div>
-							<div class="form-group form-group-feedback form-group-feedback-left">
-								<input type="text" class="form-control" placeholder="사용자 아이디" name="userId">
-								<div class="form-control-feedback">
-									<i class="icon-user-check text-muted"></i>
+							<div class="form-group form-group-feedback form-group-feedback-left row">
+								<div class="col-9">
+									<input type="text" class="form-control" placeholder="사용자 아이디" name="userId">
+									<div class="form-control-feedback">
+										<i class="icon-user-check text-muted"></i>
+									</div>
 								</div>
-								<!-- <span class="form-text text-danger"><i class="icon-cancel-circle2 mr-2"></i> 이 사용자 아이디는 이미 사용중 입니다.</span> -->
+								<div class="col-3">
+									<button class="btn bg-info-400">중복체크</button>
+								</div>
+								<!-- <span class="form-text text-danger"><i class="icon-cancel-circle2 mr-2"></i>이 사용자 아이디는 이미 사용중 입니다.</span> -->
+								<!-- <span class="form-text text-success col-10"><i class="icon-checkmark-circle mr-2"></i>이 사용자 아이디는 사용 가능합니다.</span> -->
 							</div>
 							<div class="form-group form-group-feedback form-group-feedback-left">
-								<input type="password" class="form-control" placeholder="비밀번호">
+								<input type="password" class="form-control" placeholder="비밀번호" name="password">
 								<div class="form-control-feedback">
 									<i class="icon-user-lock text-muted"></i>
 								</div>
@@ -75,21 +87,21 @@
 							</div>
 							
 							<div class="form-group form-group-feedback form-group-feedback-left">
-								<input type="password" class="form-control" placeholder="사용자 이름">
+								<input type="text" class="form-control" placeholder="사용자 이름" name="name">
 								<div class="form-control-feedback">
 									<i class="icon-user text-muted"></i>
 								</div>
 							</div>
 							
 							<div class="form-group form-group-feedback form-group-feedback-left">
-								<input type="password" class="form-control" placeholder="이메일">
+								<input type="email" class="form-control" placeholder="이메일" name="email">
 								<div class="form-control-feedback">
 									<i class="icon-mention text-muted"></i>
 								</div>
 							</div>
 							
 							<div class="form-group form-group-feedback form-group-feedback-left">
-								<input type="password" class="form-control" placeholder="핸드폰 번호">
+								<input type="text" class="form-control" placeholder="핸드폰 번호" name="phone">
 								<div class="form-control-feedback">
 									<i class="icon-iphone text-muted"></i>
 								</div>

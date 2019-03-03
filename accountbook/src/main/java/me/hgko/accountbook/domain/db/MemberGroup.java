@@ -1,48 +1,40 @@
 package me.hgko.accountbook.domain.db;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 import me.hgko.accountbook.domain.Domain;
 
 /**
- * 구성원 정보 테이블 도메인
+ * 구성원 그룹 정보 테이블 도메인
  * 
  * @author hgko
  *
  */
 @Entity
-@Table(name = "tb_member")
+@Table(name = "tb_member_group")
 @Data
-public class Member implements Domain {
+public class MemberGroup implements Domain {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private int id;
 	
 	/** 이름 */
 	@Column(nullable = false, length = 20)
 	private String name;
 	
-	/** 별명 */
-	@Column(length = 45)
-	private String nickname;
+	private int userId;
 	
-	/** 핸드폰번호 */
-	@Column(nullable = false, length = 20)
-	private String phone;
-	
-	@ManyToOne
-	@JoinColumn(name = "member_group_id")
-    @JsonIgnore
-    private MemberGroup memberGroup;
+	@OneToMany(mappedBy = "memberGroup", fetch = FetchType.EAGER)
+	private List<Member> members;
 }

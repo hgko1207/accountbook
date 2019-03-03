@@ -1,5 +1,6 @@
 package me.hgko.accountbook.domain.db;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,5 +23,14 @@ public class IncomeSetting implements Domain {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
+	
+	private int memberGroupId;
+	
+	/** 이름 */
+	@Column(nullable = false, length = 20)
+	private String name;
+	
+	@Column(length = 255)
+	private String description;
 }

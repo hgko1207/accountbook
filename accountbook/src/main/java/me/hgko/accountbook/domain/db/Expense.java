@@ -22,5 +22,5 @@ public class Expense implements Domain {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 }
