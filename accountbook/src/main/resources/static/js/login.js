@@ -76,9 +76,6 @@ var LoginValidation = function() {
         });
     };
 
-    //
-    // Return objects assigned to module
-    //
     return {
         init: function() {
             _componentUniform();

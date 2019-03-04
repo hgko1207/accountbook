@@ -1,5 +1,6 @@
 package me.hgko.accountbook.domain.db;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,5 +24,12 @@ public class Payment implements Domain {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(length = 20)
+	private String name;
+	
+	public enum PaymentType {
+		현금, 계좌이체, 체크카드, 신용카드
+	}
 	
 }

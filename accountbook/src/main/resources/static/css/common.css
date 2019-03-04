@@ -7,3 +7,26 @@
 	font-size: 1.2rem;
 	font-weight: 600;
 }
+
+@media (min-width: 768px) {
+	.w-md-1000 {
+	    width: 1000px!important;
+	}
+}
+
+.wizard>.steps {
+	border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.wizard>.content>.body {
+	padding: 1.75rem 1.25rem;
+}
+
+.wizard>.actions {
+	padding-top: 20px;
+	border-top: 1px solid rgba(0,0,0,.125);
+}
+
+legend {
+    padding-top: .625rem !important;
+}

@@ -2,7 +2,6 @@ package me.hgko.accountbook.domain.db;
 
 import java.util.List;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -29,12 +28,12 @@ public class MemberGroup implements Domain {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	/** 이름 */
-	@Column(nullable = false, length = 20)
-	private String name;
-	
 	private int userId;
 	
 	@OneToMany(mappedBy = "memberGroup", fetch = FetchType.EAGER)
 	private List<Member> members;
+	
+	public enum MemberGroupType {
+		개인, 커플, 가족, 기타;
+	}
 }
