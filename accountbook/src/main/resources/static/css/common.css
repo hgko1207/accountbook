@@ -4,29 +4,28 @@
  Header 디자인
 *******************************************************************************************************/
 .navbar-title {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	font-weight: 600;
 }
 
 @media (min-width: 768px) {
-	.w-md-1000 {
-	    width: 1000px!important;
+	.h-md-550 {
+	    height: 550px!important;
 	}
 }
 
-.wizard>.steps {
-	border-bottom: 1px solid rgba(0,0,0,.125);
+.nav-item-header div {
+	font-size: 1rem;
 }
 
-.wizard>.content>.body {
-	padding: 1.75rem 1.25rem;
+/*******************************************************************************************************
+ Page Header 디자인
+*******************************************************************************************************/
+.page-title {
+	padding: 1.6rem 0;
 }
 
-.wizard>.actions {
-	padding-top: 20px;
-	border-top: 1px solid rgba(0,0,0,.125);
-}
-
-legend {
-    padding-top: .625rem !important;
+.page-title i {
+	font-size: 20px;
+	top: -2px;
 }

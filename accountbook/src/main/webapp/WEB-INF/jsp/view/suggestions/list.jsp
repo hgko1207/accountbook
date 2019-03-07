@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/jsp/common/tagLib.jsp"%>
 
 <c:import url="/WEB-INF/jsp/common/pageHeader.jsp" >
-  	<c:param name="icon" value="icon-user" />
-  	<c:param name="title" value="사용자 정보" />
-  	<c:param name="lastname" value="My profile" />
+  	<c:param name="icon" value="icon-bubbles7" />
+  	<c:param name="title" value="건의사항" />
+  	<c:param name="lastname" value="건의사항" />
 </c:import>

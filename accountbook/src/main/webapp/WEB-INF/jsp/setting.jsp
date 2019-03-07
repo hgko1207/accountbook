@@ -20,6 +20,7 @@
 	<!-- /global stylesheets -->
 	
 	<link href="css/common.css" rel="stylesheet" type="text/css">
+	<link href="css/setting.css" rel="stylesheet" type="text/css">
 	
 	<!-- Core JS files -->
 	<script src="limitless/js/main/jquery.min.js"></script>
@@ -31,9 +32,7 @@
 	<script src="limitless/js/plugins/forms/wizards/steps.min.js"></script>
 	<script src="limitless/js/plugins/forms/selects/select2.min.js"></script>
 	<script src="limitless/js/plugins/forms/validation/validate.min.js"></script>
-	<script src="limitless/js/plugins/forms/styling/uniform.min.js"></script>
 	<script src="limitless/js/plugins/notifications/sweet_alert.min.js"></script>
-	
 	<script src="limitless/js/app.js"></script>
 	<!-- /theme JS files -->
 	
@@ -84,10 +83,16 @@
 					
 					<form class="wizard-form steps-validation" action="#">
 						<h6>구성원 설정</h6>
-						<fieldset>
+						<fieldset class="h-md-550">
 							<div class="row">
+								<fieldset class="col-md-7 offset-md-1 mb-md-3">
+									<legend class="font-weight-bold">가계부 타이틀 입력 <span class="text-danger">*</span></legend>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="예) XXX의 가계부" >
+									</div>
+								</fieldset>
 								<fieldset class="col-md-4 offset-md-1">
-									<legend class="font-weight-bold">구성원 타입 선택: <span class="text-danger">*</span></legend>
+									<legend class="font-weight-bold">구성원 타입 선택 <span class="text-danger">*</span></legend>
 									<div class="form-group">
 										<select id="memberGroupSelect" data-placeholder="Select position" class="form-control form-control-select2 required">
 											<c:forEach var="memberGroup" items="${memberGroups}">
@@ -97,7 +102,7 @@
 									</div>
 								</fieldset>
 								<fieldset class="col-md-5 offset-md-1">
-									<legend class="font-weight-bold">구성원 입력: <span class="text-danger">*</span></legend>
+									<legend class="font-weight-bold">구성원 입력 <span class="text-danger">*</span></legend>
 									<div class="member-group1">
 										<div class="form-group d-flex">
 											<input type="text" class="form-control" placeholder="이름"/>
@@ -123,20 +128,20 @@
 											<div data-repeater-item class="form-group d-flex">
 												<input type="text" class="form-control" placeholder="이름"/>
 												<input type="text" class="form-control ml-2" placeholder="핸드폰번호"/>
-												<button data-repeater-delete type="button" class="btn bg-danger ml-2"><i class="icon-minus2"></i></button>
+												<button data-repeater-delete type="button" class="btn bg-danger ml-2 btn-icon btn-sm"><i class="icon-minus2"></i></button>
 											</div>
 										</div>
-										<button data-repeater-create type="button" class="btn bg-teal-400"><i class="icon-plus2"></i></button>
+										<button data-repeater-create type="button" class="btn bg-teal-400 btn-icon btn-sm"><i class="icon-plus2"></i></button>
 									</div>
 								</fieldset>
 							</div>
 						</fieldset>
 						
 						<h6>수입 항목 설정</h6>
-						<fieldset>
+						<fieldset class="h-md-550">
 							<div class="row">
 								<fieldset class="col-md-8 offset-md-2">
-									<legend class="font-weight-bold">수입 항목 추가: <span class="text-danger">*</span>
+									<legend class="font-weight-bold">수입 항목 추가 <span class="text-danger">*</span>
 										<span class="text-muted font-size-sm ml-3">예) 월급, 상여금, 알바비, 기타 등</span>
 									</legend>
 									<div class="setting-repeater">
@@ -154,10 +159,10 @@
 						</fieldset>
 						
 						<h6>지불 방식 설정</h6>
-						<fieldset>
+						<fieldset class="h-md-550">
 							<div class="row">
 								<fieldset class="col-md-3 offset-md-1">
-									<legend class="font-weight-bold">계좌(은행) 추가: <span class="text-danger">*</span></legend>
+									<legend class="font-weight-bold">계좌(은행) 추가 <span class="text-danger">*</span></legend>
 									<div class="setting-repeater">
 										<div data-repeater-list="member-list">
 											<div data-repeater-item class="form-group d-flex">
@@ -169,7 +174,7 @@
 									</div>
 								</fieldset>
 								<fieldset class="col-md-3 ml-md-4">
-									<legend class="font-weight-bold">체크카드 추가: <span class="text-danger">*</span></legend>
+									<legend class="font-weight-bold">체크카드 추가 <span class="text-danger">*</span></legend>
 									<div class="setting-repeater">
 										<div data-repeater-list="member-list">
 											<div data-repeater-item class="form-group d-flex">
@@ -181,7 +186,7 @@
 									</div>
 								</fieldset>
 								<fieldset class="col-md-3 ml-md-4">
-									<legend class="font-weight-bold">신용카드 추가: <span class="text-danger">*</span></legend>
+									<legend class="font-weight-bold">신용카드 추가 <span class="text-danger">*</span></legend>
 									<div class="setting-repeater">
 										<div data-repeater-list="member-list">
 											<div data-repeater-item class="form-group d-flex">
@@ -196,10 +201,10 @@
 						</fieldset>
 						
 						<h6>지출 항목 설정</h6>
-						<fieldset>
+						<fieldset class="h-md-550">
 							<div class="row">
 								<fieldset class="col-md-5 offset-md-1">
-									<legend class="font-weight-bold">고정비 추가: <span class="text-danger">*</span>
+									<legend class="font-weight-bold">고정비 추가 <span class="text-danger">*</span>
 										<span class="text-muted font-size-sm ml-3">예) 적금, 보험, 관리비, 통신비 등</span>
 									</legend>
 									<div class="setting-repeater">
@@ -214,7 +219,7 @@
 									</div>
 								</fieldset>
 								<fieldset class="col-md-5 ml-md-3">
-									<legend class="font-weight-bold">비고정비 추가: <span class="text-danger">*</span>
+									<legend class="font-weight-bold">비고정비 추가 <span class="text-danger">*</span>
 										<span class="text-muted font-size-sm ml-3">예) 교통비, 식비, 간식비, 경조사비 등</span>
 									</legend>
 									<div class="setting-repeater">
@@ -231,10 +236,71 @@
 							</div>
 						</fieldset>
 						
-						<h6>확인</h6>
-						<fieldset>
-							<div>
-							
+						<h6>설정 확인</h6>
+						<fieldset class="h-md-550">
+							<div class="form-group row">
+								<label class="col-form-label col-lg-2 offset-md-2 font-weight-bold">
+									<i class="icon-checkmark2 text-info mr-2"></i>가계부 타이틀
+								</label>
+								<div class="col-lg-6">
+									<input type="text" class="form-control" readonly value="가족의 가계부">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-lg-2 offset-md-2 font-weight-bold">
+									<i class="icon-checkmark2 text-info mr-2"></i>구성원 정보
+								</label>
+								<div class="col-lg-6">
+									<input type="text" class="form-control" readonly value="가족 - 홍길동, 김영희">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-lg-2 offset-md-2 font-weight-bold">
+									<i class="icon-checkmark2 text-info mr-2"></i>수입 항목 정보
+								</label>
+								<div class="col-lg-6">
+									<input type="text" class="form-control" readonly value="월급, 상여금, 알바비, 기타">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-lg-10 offset-md-2 font-weight-bold">
+									<i class="icon-checkmark2 text-info mr-2"></i>지불 방식 정보
+								</label>
+								<div class="col-lg-2 offset-md-2 text-md-right">
+									<label class="col-form-label">계좌(은행) :</label>
+								</div>
+								<div class="col-md-6">
+									<input type="text" class="form-control" readonly value="하나은행">
+								</div>
+								<div class="col-lg-2 offset-md-2 text-md-right mt-2">
+									<label class="col-form-label">체크카드 :</label>
+								</div>
+								<div class="col-md-6">
+									<input type="text" class="form-control mt-md-2" readonly value="농협카드">
+								</div>
+								<div class="col-lg-2 offset-md-2 text-md-right mt-2">
+									<label class="col-form-label">신용카드 :</label>
+								</div>
+								<div class="col-md-6">
+									<input type="text" class="form-control mt-md-2" readonly value="국민카드">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-lg-10 offset-md-2 font-weight-bold">
+									<i class="icon-checkmark2 text-info mr-2"></i>지출 항목 정보
+								</label>
+								<div class="col-lg-2 offset-md-2 text-md-right">
+									<label class="col-form-label">고정비 :</label>
+								</div>
+								<div class="col-md-6">
+									<input type="text" class="form-control" readonly value="적금, 보험, 관리비">
+								</div>
+								<div class="col-lg-2 offset-md-2 text-md-right mt-2">
+									<label class="col-form-label">비고정비 :</label>
+								</div>
+								<div class="col-md-6">
+									<input type="text" class="form-control mt-md-2" readonly value="교통비, 식비, 간식비">
+								</div>
 							</div>
 						</fieldset>
 					</form>

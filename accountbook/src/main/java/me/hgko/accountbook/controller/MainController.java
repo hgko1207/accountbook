@@ -1,13 +1,11 @@
 package me.hgko.accountbook.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import me.hgko.accountbook.domain.db.MemberGroup.MemberGroupType;
-import me.hgko.accountbook.service.MemberGroupService;
 
 /**
  * 
@@ -18,9 +16,6 @@ import me.hgko.accountbook.service.MemberGroupService;
 @Controller
 public class MainController {
 	
-	@Autowired
-	private MemberGroupService memberGroupService;
-
 	@GetMapping("/")
     public String index() throws Exception {
         return "redirect:login";

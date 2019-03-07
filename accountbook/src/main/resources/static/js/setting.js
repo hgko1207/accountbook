@@ -30,7 +30,7 @@
 				finish: '완료 <i class="icon-paperplane ml-2" />'
 			},
 			onFinished: function (event, currentIndex) {
-				alert('Form submitted.');
+				location.href = "home";
 			}
 		});
 		

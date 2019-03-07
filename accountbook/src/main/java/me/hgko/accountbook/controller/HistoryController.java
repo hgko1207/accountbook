@@ -6,25 +6,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * 설정 관리 컨트롤러
+ * 수입, 지출 내역 관리 컨트롤러
  * 
  * @author hgko
  *
  */
 @Controller
-@RequestMapping("setting")
-public class SettingController {
-	
-	/**
-	 * 구성원 설정 화면
-	 * @param model
-	 */
-	@GetMapping("member")
-    public void member(Model model) {
-	}
+@RequestMapping("history")
+public class HistoryController {
 
 	/**
-	 * 수입 항목 설정 화면
+	 * 수입 내역 화면
 	 * @param model
 	 */
 	@GetMapping("income")
@@ -32,15 +24,7 @@ public class SettingController {
 	}
 	
 	/**
-	 * 지불 항목 설정 화면
-	 * @param model
-	 */
-	@GetMapping("payment")
-    public void payment(Model model) {
-	}
-	
-	/**
-	 * 지출 항목 설정 화면
+	 * 지출 내역 화면
 	 * @param model
 	 */
 	@GetMapping("expense")
