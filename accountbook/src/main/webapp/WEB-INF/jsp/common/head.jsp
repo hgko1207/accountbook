@@ -51,4 +51,9 @@
 	
 	<script src="${contextName}/limitless/js/app.js"></script>
 	<!-- /theme JS files -->
+	
+	<script src="${contextName}/js/jquery/jquery.repeater.js"></script>
+	
+	<script src="${contextName}/js/common.js"></script>
+	<script src="${contextName}/js/table.js"></script>
 </head>

@@ -5,44 +5,40 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import me.hgko.accountbook.domain.Domain;
 
 /**
- * 구성원 정보 테이블 도메인
+ * 자산 그룹 관리 테이블 도메인
+ * - 현금, 예금, 적금, 대출, 보장성보험, 대여금
  * 
  * @author hgko
  *
  */
 @Entity
-@Table(name = "tb_member")
+@Table(name = "tb_assets_group")
 @Data
-public class Member implements Domain {
+@NoArgsConstructor
+public class AssetsGroup implements Domain {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	/** 이름 */
 	@Column(nullable = false, length = 20)
 	private String name;
 	
-	/** 별명 */
-	@Column(length = 45)
-	private String nickname;
+	/** 사용여부 */
+	private boolean used;
 	
-	/** 핸드폰번호 */
-	@Column(nullable = false, length = 20)
-	private String phone;
+	private int userId;
 	
-	@ManyToOne
-	@JoinColumn(name = "basic_setting_id")
-    @JsonIgnore
-    private BasicInfo basicSetting;
+	public AssetsGroup(String name, boolean used, int userId) {
+		this.name = name;
+		this.used = used;
+		this.userId = userId;
+	}
 }

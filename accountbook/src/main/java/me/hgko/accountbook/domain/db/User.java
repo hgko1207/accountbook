@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
@@ -19,10 +21,13 @@ import me.hgko.accountbook.domain.Domain;
 @Table(name = "tb_user")
 @Data
 public class User implements Domain {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 
 	/** 사용자ID */
-	@Id
-	@Column(nullable = false, length = 20)
+	@Column(unique=true, length = 20)
 	private String userId;
 	
 	/** 사용자명 */
@@ -48,6 +53,6 @@ public class User implements Domain {
 	private LocalDateTime updateDate;
 	
 	@OneToOne
-    @JoinColumn(name = "member_group_id")
-	private MemberGroup memberGroup;
+    @JoinColumn(name = "basic_info_id")
+	private BasicInfo basicInfo;
 }

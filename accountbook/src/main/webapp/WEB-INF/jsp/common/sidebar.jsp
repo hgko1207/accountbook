@@ -52,7 +52,7 @@
 					</ul>
 				</li>
 				<li id="statistics" class="nav-item nav-item-submenu">
-					<a href="#" class="nav-link"><i class="icon-pie-chart3"></i> <span>통계</span></a>
+					<a href="#" class="nav-link"><i class="icon-pie-chart3"></i> <span>통 계</span></a>
 					<ul class="nav nav-group-sub" data-submenu-title="Layouts">
 						<li id="statistics_all" class="nav-item"><a href="${pageContext.request.contextPath}/statistics/all" class="nav-link">
 							<i class="icon-chart"></i><span>전체 통계</span></a>
@@ -66,10 +66,13 @@
 					</ul>
 				</li>
 				<li id="setting" class="nav-item nav-item-submenu">
-					<a href="#" class="nav-link"><i class="icon-cogs"></i> <span>설정 관리</span></a>
+					<a href="#" class="nav-link"><i class="icon-cogs"></i> <span>설 정</span></a>
 					<ul class="nav nav-group-sub" data-submenu-title="Layouts">
-						<li id="setting_member" class="nav-item"><a href="${pageContext.request.contextPath}/setting/member" class="nav-link">
-							<i class="icon-users"></i><span>구성원 설정</span></a>
+						<li id="setting_basic" class="nav-item"><a href="${pageContext.request.contextPath}/setting/basic" class="nav-link">
+							<i class="icon-cog4"></i><span>기본 설정</span></a>
+						</li>
+						<li id="setting_assets" class="nav-item"><a href="${pageContext.request.contextPath}/setting/assets" class="nav-link">
+							<i class="icon-cog4"></i><span>자산 설정</span></a>
 						</li>
 						<li id="setting_income" class="nav-item"><a href="${pageContext.request.contextPath}/setting/income" class="nav-link">
 							<i class="icon-cog4"></i><span>수입 항목 설정</span></a>
@@ -78,7 +81,7 @@
 							<i class="icon-cog4"></i><span>지불 방식 설정</span></a>
 						</li>
 						<li id="setting_expense" class="nav-item"><a href="${pageContext.request.contextPath}/setting/expense" class="nav-link">
-							<i class="icon-cog4"></i><span>지출 항목 설정</span></a>
+							<i class="icon-cog4"></i><span>지출 분류 설정</span></a>
 						</li>
 					</ul>
 				</li>

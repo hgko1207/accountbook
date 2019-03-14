@@ -63,11 +63,12 @@
     	
     	$("#memberGroupSelect").change(function() {
     		var group = $("#memberGroupSelect option:selected").text();
-    		if (group == '개인') {
+    		console.log(group);
+    		if (group == '개인용') {
     			$(".member-group1").removeClass("d-none");
     			$(".member-group2").addClass("d-none");
     			$(".member-group3").addClass("d-none");
-    		} else if (group == '커플') {
+    		} else if (group == '커플용') {
     			$(".member-group1").addClass("d-none");
     			$(".member-group2").removeClass("d-none");
     			$(".member-group3").addClass("d-none");

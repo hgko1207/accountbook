@@ -6,3 +6,7 @@
   	<c:param name="title" value="Dashboard" />
   	<c:param name="lastname" value="Dashboard" />
 </c:import>
+
+<div class="content">
+
+</div>

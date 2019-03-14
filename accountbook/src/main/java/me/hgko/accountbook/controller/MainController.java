@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import me.hgko.accountbook.domain.db.MemberGroup.MemberGroupType;
+import me.hgko.accountbook.domain.db.BasicInfo.MemberGroupType;
 
 /**
  * 

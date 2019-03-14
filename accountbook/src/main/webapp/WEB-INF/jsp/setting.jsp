@@ -82,11 +82,11 @@
 					</div>
 					
 					<form class="wizard-form steps-validation" action="#">
-						<h6>구성원 설정</h6>
+						<h6>기본 설정</h6>
 						<fieldset class="h-md-550">
 							<div class="row">
 								<fieldset class="col-md-7 offset-md-1 mb-md-3">
-									<legend class="font-weight-bold">가계부 타이틀 입력 <span class="text-danger">*</span></legend>
+									<legend class="font-weight-bold">가계부 제목 입력 <span class="text-danger">*</span></legend>
 									<div class="form-group">
 										<input type="text" class="form-control" placeholder="예) XXX의 가계부" >
 									</div>
