@@ -1,11 +1,14 @@
 package me.hgko.accountbook.domain.db;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -13,16 +16,16 @@ import lombok.NoArgsConstructor;
 import me.hgko.accountbook.domain.Domain;
 
 /**
- * 수입 항목 설정 테이블 도메인
+ * 지출 대분류 설정 정보 테이블 도메인
  * 
  * @author hgko
  *
  */
 @Entity
-@Table(name = "tb_income_setting")
+@Table(name = "tb_expense_main_setting")
 @Data
 @NoArgsConstructor
-public class IncomeSetting implements Domain {
+public class ExpenseMainSetting implements Domain {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,14 +33,14 @@ public class IncomeSetting implements Domain {
 	
 	private int userId;
 	
-	/** 이름 */
+	/** 대분류 이름 */
 	@Column(nullable = false, length = 20)
 	private String name;
 	
-	@Lob
-	private String memo;
+	@OneToMany(mappedBy = "expenseMainSetting", fetch = FetchType.EAGER)
+	private List<ExpenseSubSetting> expenseSubSettings;
 	
-	public IncomeSetting(String name, int userId) {
+	public ExpenseMainSetting(String name, int userId) {
 		this.name = name;
 		this.userId = userId;
 	}

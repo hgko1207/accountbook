@@ -19,14 +19,14 @@ $.extend( $.fn.dataTable.defaults, {
     },
     searching: false,
     lengthChange: false,
-    order: [[0, 'desc']],
     pageLength: 10
 });
 
 var Datatables = {
 	basic: function(id, tableOption) {
 		var table = $(id).DataTable({
-			columns: tableOption ? tableOption.columns : null
+			columns: tableOption ? tableOption.columns : null,
+			order: [[0, 'desc']]
 		});
 		
 		return table;

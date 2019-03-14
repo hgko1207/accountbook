@@ -74,14 +74,17 @@
 						<li id="setting_assets" class="nav-item"><a href="${pageContext.request.contextPath}/setting/assets" class="nav-link">
 							<i class="icon-cog4"></i><span>자산 설정</span></a>
 						</li>
-						<li id="setting_income" class="nav-item"><a href="${pageContext.request.contextPath}/setting/income" class="nav-link">
-							<i class="icon-cog4"></i><span>수입 항목 설정</span></a>
+						<li id="setting_card" class="nav-item"><a href="${pageContext.request.contextPath}/setting/card" class="nav-link">
+							<i class="icon-cog4"></i><span>카드 설정</span></a>
 						</li>
-						<li id="setting_payment" class="nav-item"><a href="${pageContext.request.contextPath}/setting/payment" class="nav-link">
-							<i class="icon-cog4"></i><span>지불 방식 설정</span></a>
+						<li id="setting_income" class="nav-item"><a href="${pageContext.request.contextPath}/setting/income" class="nav-link">
+							<i class="icon-cog4"></i><span>수입 분류 설정</span></a>
 						</li>
 						<li id="setting_expense" class="nav-item"><a href="${pageContext.request.contextPath}/setting/expense" class="nav-link">
 							<i class="icon-cog4"></i><span>지출 분류 설정</span></a>
+						</li>
+						<li id="setting_fixedCost" class="nav-item"><a href="${pageContext.request.contextPath}/setting/fixedCost" class="nav-link">
+							<i class="icon-cog4"></i><span>고정비 설정</span></a>
 						</li>
 					</ul>
 				</li>

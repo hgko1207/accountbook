@@ -29,3 +29,30 @@
 	font-size: 20px;
 	top: -2px;
 }
+
+.modal-header {
+	padding: 1.25rem !important;
+	border-bottom: 1px solid rgba(0,0,0,.125) !important;
+}
+
+.modal-footer {
+	padding: 1.25rem !important;
+	border-top: 1px solid rgba(0,0,0,.125) !important;
+}
+
+/*******************************************************************************************************
+ Table µðÀÚÀÎ
+*******************************************************************************************************/
+.table th {
+	font-weight: 600;
+}
+
+.datatable-footer {
+    border-top: 1px solid #b7b7b7 !important;
+    margin-top: -1px !important;
+    margin-right: 1px !important;
+}
+
+.dataTables_wrapper .table-bordered {
+	border: 0 !important;
+}

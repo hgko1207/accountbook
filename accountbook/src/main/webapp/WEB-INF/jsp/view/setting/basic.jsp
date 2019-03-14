@@ -73,7 +73,7 @@
 					</form>
 				</div>
 				<div class="card-footer bg-white d-flex justify-content-center align-items-center">
-					<button type="submit" class="btn bg-blue">&nbsp;&nbsp;<i class="icon-paperplane mr-2"></i> 가계부 추가&nbsp;&nbsp;</button>
+					<button type="submit" class="btn bg-teal-400">&nbsp;&nbsp;<i class="icon-paperplane mr-2"></i> 가계부 추가&nbsp;&nbsp;</button>
 				</div>
 			</div>
 		</div>
@@ -162,8 +162,7 @@ var BasicSetting = function() {
 			    }, {
 			    	width: "10%",
 			    	render: function(data, type, row, meta) {
-			    		return '<a href="#" class="btn btn-outline bg-pink-400 text-pink-800 btn-icon rounded-round ml-2" ' +
-		    				'onClick="previewAttachment(\'' + row.id + '\')"><i class="icon-link"></i></a>'
+			    		return '<button type="button" class="btn bg-primary-400 btn-sm"><i class="icon-pencil7 mr-1"></i> 수정</button>'
 			    	}
 			    }]
 			},
